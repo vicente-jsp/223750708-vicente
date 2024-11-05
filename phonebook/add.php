@@ -2,13 +2,13 @@
     include 'db.php';
 
 
-    if ($_SERVEp["REQUEST_METHOD"]=="POST"){
+    if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
         $name = $_POST['name'];
         $phone = $_POST['phone'];
 
         if (!empty($name)&& !empty ($phone)){
-            $sql= "INSERT INTO contacts (name, phone) VALUES ('$name', '$phone')";
+            $sql= "INSERT INTO contancts (name, phone) VALUES ('$name', '$phone')";
 
             if ($conn->query($sql)=== TRUE){
                 echo "New contact added successfully!";

@@ -1,6 +1,6 @@
 <?php
     include "db.php";
-    $sql = "Select * from contacts";
+    $sql = "Select * from contancts";
     $result = $conn->query($sql);
 ?>
 
@@ -22,7 +22,7 @@
         </tr>
         <?php
         if ($result->num_rows >0){
-            while ($row - $result->fetch_assoc()){
+            while ($row = $result->fetch_assoc()){
 
                 echo "<tr>";
                 echo "<td>" . $row['name'] . "</td>";
